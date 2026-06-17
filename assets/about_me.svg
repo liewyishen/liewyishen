@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" preserveAspectRatio="xMidYMid meet" xml:space="preserve" font-family="'Fira Code', 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace">
+  <title>Liew Yi Shen — ~/about_me.py notebook banner</title>
+  <defs>
+    <radialGradient id="paperGrad" cx="48%" cy="40%" r="82%">
+      <stop offset="0%" stop-color="#fcf7eb"/>
+      <stop offset="100%" stop-color="#f1e9d2"/>
+    </radialGradient>
+    <linearGradient id="foldGrad" gradientUnits="userSpaceOnUse" x1="940" y1="342" x2="974" y2="376">
+      <stop offset="0%" stop-color="#ebddbf"/>
+      <stop offset="100%" stop-color="#fdf9ef"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0.07 0"/>
+    </filter>
+    <clipPath id="paperClip"><rect x="26" y="22" width="948" height="354" rx="2"/></clipPath>
+    <clipPath id="c1"><rect x="0" y="0" height="400" width="288"><animate attributeName="width" values="0;0;288;288" keyTimes="0;0.018;0.059;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c2"><rect x="0" y="0" height="400" width="310"><animate attributeName="width" values="0;0;310;310" keyTimes="0;0.071;0.118;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c3"><rect x="0" y="0" height="400" width="720"><animate attributeName="width" values="0;0;720;720" keyTimes="0;0.129;0.224;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c4"><rect x="0" y="0" height="400" width="850"><animate attributeName="width" values="0;0;850;850" keyTimes="0;0.235;0.341;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c5"><rect x="0" y="0" height="400" width="685"><animate attributeName="width" values="0;0;685;685" keyTimes="0;0.353;0.435;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c6"><rect x="0" y="0" height="400" width="696"><animate attributeName="width" values="0;0;696;696" keyTimes="0;0.447;0.529;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c7"><rect x="0" y="0" height="400" width="630"><animate attributeName="width" values="0;0;630;630" keyTimes="0;0.541;0.612;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c8"><rect x="0" y="0" height="400" width="377"><animate attributeName="width" values="0;0;377;377" keyTimes="0;0.624;0.671;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c9"><rect x="0" y="0" height="400" width="800"><animate attributeName="width" values="0;0;800;800" keyTimes="0;0.682;0.776;1" dur="17s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+
+  <rect x="26" y="22" width="948" height="354" rx="2" transform="translate(5,8)" fill="#2a2622" fill-opacity="0.15" filter="url(#softShadow)"/>
+  <rect x="26" y="22" width="948" height="354" rx="2" fill="url(#paperGrad)" stroke="#e7dabd" stroke-width="1"/>
+
+  <g clip-path="url(#paperClip)">
+    <rect x="26" y="22" width="948" height="354" fill="#f6f0e0" filter="url(#grain)"/>
+    <g stroke="#d8c89e" stroke-opacity="0.5" stroke-width="1">
+      <line x1="26" y1="35" x2="974" y2="35"/>
+      <line x1="26" y1="69" x2="974" y2="69"/>
+      <line x1="26" y1="103" x2="974" y2="103"/>
+      <line x1="26" y1="137" x2="974" y2="137"/>
+      <line x1="26" y1="171" x2="974" y2="171"/>
+      <line x1="26" y1="205" x2="974" y2="205"/>
+      <line x1="26" y1="239" x2="974" y2="239"/>
+      <line x1="26" y1="273" x2="974" y2="273"/>
+      <line x1="26" y1="307" x2="974" y2="307"/>
+      <line x1="26" y1="341" x2="974" y2="341"/>
+    </g>
+    <line x1="94" y1="22" x2="94" y2="376" stroke="#cf8d7c" stroke-opacity="0.5" stroke-width="1.5"/>
+  </g>
+
+  <g clip-path="url(#c1)"><text x="112" y="64" font-size="18" font-style="italic"><tspan fill="#998f78"># ~/about_me.py</tspan></text></g>
+  <g clip-path="url(#c2)"><text x="112" y="98" font-size="18"><tspan fill="#4f5d92">class </tspan><tspan fill="#3e7c6d">LiewYiShen</tspan><tspan fill="#34322c">:</tspan></text></g>
+  <g clip-path="url(#c3)"><text x="156" y="132" font-size="18"><tspan fill="#34322c">role  = </tspan><tspan fill="#a05c3c">"I build AI systems that reach production"</tspan></text></g>
+  <g clip-path="url(#c4)"><text x="156" y="166" font-size="18"><tspan fill="#34322c">focus = [</tspan><tspan fill="#a05c3c">"production LLM systems"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"RAG"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"agentic workflows"</tspan><tspan fill="#34322c">,</tspan></text></g>
+  <g clip-path="url(#c5)"><text x="156" y="200" font-size="18"><tspan fill-opacity="0">focus = [</tspan><tspan fill="#a05c3c">"financial AI"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"making models behave"</tspan><tspan fill="#34322c">]</tspan></text></g>
+  <g clip-path="url(#c6)"><text x="156" y="234" font-size="18"><tspan fill="#34322c">cares = </tspan><tspan fill="#a05c3c">"AI that actually ships, not just demos"</tspan></text></g>
+  <g clip-path="url(#c7)"><text x="156" y="268" font-size="18"><tspan fill="#34322c">status = </tspan><tspan fill="#a05c3c">"still compiling, never crashing"</tspan></text></g>
+  <g clip-path="url(#c8)"><text x="156" y="302" font-size="18"><tspan fill="#4f5d92">def </tspan><tspan fill="#96792f">__repr__</tspan><tspan fill="#34322c">(self):</tspan></text></g>
+  <g clip-path="url(#c9)"><text x="200" y="336" font-size="18"><tspan fill="#4f5d92">return </tspan><tspan fill="#a05c3c">"let's build something that actually works"</tspan><tspan fill="#4a463d"> ▌<animate attributeName="fill-opacity" values="1;0" keyTimes="0;0.5" dur="1.06s" calcMode="discrete" repeatCount="indefinite"/></tspan></text></g>
+
+  <path d="M974 342 L974 376 L940 376 Z" fill="url(#foldGrad)" stroke="#d0bd95" stroke-width="1" stroke-linejoin="round"/>
+</svg>

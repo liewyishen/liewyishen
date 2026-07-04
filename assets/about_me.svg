@@ -18,7 +18,7 @@
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0.07 0"/>
     </filter>
     <clipPath id="paperClip"><rect x="26" y="22" width="948" height="354" rx="2"/></clipPath>
-    <clipPath id="c1"><rect x="0" y="0" height="400" width="635"><animate attributeName="width" values="0;0;635;635" keyTimes="0;0.018;0.059;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c1"><rect x="0" y="0" height="400" width="288"><animate attributeName="width" values="0;0;288;288" keyTimes="0;0.018;0.059;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c2"><rect x="0" y="0" height="400" width="310"><animate attributeName="width" values="0;0;310;310" keyTimes="0;0.071;0.118;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c3"><rect x="0" y="0" height="400" width="850"><animate attributeName="width" values="0;0;850;850" keyTimes="0;0.129;0.224;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c4"><rect x="0" y="0" height="400" width="705"><animate attributeName="width" values="0;0;705;705" keyTimes="0;0.235;0.341;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
@@ -49,7 +49,7 @@
     <line x1="94" y1="22" x2="94" y2="376" stroke="#cf8d7c" stroke-opacity="0.5" stroke-width="1.5"/>
   </g>
 
-  <g clip-path="url(#c1)"><text x="112" y="64" font-size="18" font-style="italic"><tspan fill="#998f78"># ~/about_me.py — freshly graduated edition</tspan></text></g>
+  <g clip-path="url(#c1)"><text x="112" y="64" font-size="18" font-style="italic"><tspan fill="#998f78"># ~/about_me.py</tspan></text></g>
   <g clip-path="url(#c2)"><text x="112" y="98" font-size="18"><tspan fill="#4f5d92">class </tspan><tspan fill="#3e7c6d">LiewYiShen</tspan><tspan fill="#34322c">:</tspan></text></g>
   <g clip-path="url(#c3)"><text x="156" y="132" font-size="18"><tspan fill="#34322c">role     = </tspan><tspan fill="#a05c3c">"AI/ML engineer, officially escaped uni @ TARUMT"</tspan></text></g>
   <g clip-path="url(#c4)"><text x="156" y="166" font-size="18"><tspan fill="#34322c">building = [</tspan><tspan fill="#a05c3c">"RAG systems"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"agentic workflows"</tspan><tspan fill="#34322c">,</tspan></text></g>

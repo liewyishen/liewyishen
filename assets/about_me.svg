@@ -18,13 +18,13 @@
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0.07 0"/>
     </filter>
     <clipPath id="paperClip"><rect x="26" y="22" width="948" height="354" rx="2"/></clipPath>
-    <clipPath id="c1"><rect x="0" y="0" height="400" width="288"><animate attributeName="width" values="0;0;288;288" keyTimes="0;0.018;0.059;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c1"><rect x="0" y="0" height="400" width="635"><animate attributeName="width" values="0;0;635;635" keyTimes="0;0.018;0.059;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c2"><rect x="0" y="0" height="400" width="310"><animate attributeName="width" values="0;0;310;310" keyTimes="0;0.071;0.118;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c3"><rect x="0" y="0" height="400" width="720"><animate attributeName="width" values="0;0;720;720" keyTimes="0;0.129;0.224;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c4"><rect x="0" y="0" height="400" width="850"><animate attributeName="width" values="0;0;850;850" keyTimes="0;0.235;0.341;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c5"><rect x="0" y="0" height="400" width="685"><animate attributeName="width" values="0;0;685;685" keyTimes="0;0.353;0.435;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c6"><rect x="0" y="0" height="400" width="696"><animate attributeName="width" values="0;0;696;696" keyTimes="0;0.447;0.529;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c7"><rect x="0" y="0" height="400" width="630"><animate attributeName="width" values="0;0;630;630" keyTimes="0;0.541;0.612;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c3"><rect x="0" y="0" height="400" width="850"><animate attributeName="width" values="0;0;850;850" keyTimes="0;0.129;0.224;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c4"><rect x="0" y="0" height="400" width="705"><animate attributeName="width" values="0;0;705;705" keyTimes="0;0.235;0.341;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c5"><rect x="0" y="0" height="400" width="545"><animate attributeName="width" values="0;0;545;545" keyTimes="0;0.353;0.435;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c6"><rect x="0" y="0" height="400" width="875"><animate attributeName="width" values="0;0;875;875" keyTimes="0;0.447;0.529;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c7"><rect x="0" y="0" height="400" width="670"><animate attributeName="width" values="0;0;670;670" keyTimes="0;0.541;0.612;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c8"><rect x="0" y="0" height="400" width="377"><animate attributeName="width" values="0;0;377;377" keyTimes="0;0.624;0.671;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
     <clipPath id="c9"><rect x="0" y="0" height="400" width="800"><animate attributeName="width" values="0;0;800;800" keyTimes="0;0.682;0.776;1" dur="12s" calcMode="linear" repeatCount="indefinite"/></rect></clipPath>
   </defs>
@@ -49,13 +49,13 @@
     <line x1="94" y1="22" x2="94" y2="376" stroke="#cf8d7c" stroke-opacity="0.5" stroke-width="1.5"/>
   </g>
 
-  <g clip-path="url(#c1)"><text x="112" y="64" font-size="18" font-style="italic"><tspan fill="#998f78"># ~/about_me.py</tspan></text></g>
+  <g clip-path="url(#c1)"><text x="112" y="64" font-size="18" font-style="italic"><tspan fill="#998f78"># ~/about_me.py — freshly graduated edition</tspan></text></g>
   <g clip-path="url(#c2)"><text x="112" y="98" font-size="18"><tspan fill="#4f5d92">class </tspan><tspan fill="#3e7c6d">LiewYiShen</tspan><tspan fill="#34322c">:</tspan></text></g>
-  <g clip-path="url(#c3)"><text x="156" y="132" font-size="18"><tspan fill="#34322c">role  = </tspan><tspan fill="#a05c3c">"I build AI systems that reach production"</tspan></text></g>
-  <g clip-path="url(#c4)"><text x="156" y="166" font-size="18"><tspan fill="#34322c">focus = [</tspan><tspan fill="#a05c3c">"production LLM systems"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"RAG"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"agentic workflows"</tspan><tspan fill="#34322c">,</tspan></text></g>
-  <g clip-path="url(#c5)"><text x="156" y="200" font-size="18"><tspan fill-opacity="0">focus = [</tspan><tspan fill="#a05c3c">"financial AI"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"making models behave"</tspan><tspan fill="#34322c">]</tspan></text></g>
-  <g clip-path="url(#c6)"><text x="156" y="234" font-size="18"><tspan fill="#34322c">cares = </tspan><tspan fill="#a05c3c">"AI that actually ships, not just demos"</tspan></text></g>
-  <g clip-path="url(#c7)"><text x="156" y="268" font-size="18"><tspan fill="#34322c">status = </tspan><tspan fill="#a05c3c">"still compiling, never crashing"</tspan></text></g>
+  <g clip-path="url(#c3)"><text x="156" y="132" font-size="18"><tspan fill="#34322c">role     = </tspan><tspan fill="#a05c3c">"AI/ML engineer, officially escaped uni @ TARUMT"</tspan></text></g>
+  <g clip-path="url(#c4)"><text x="156" y="166" font-size="18"><tspan fill="#34322c">building = [</tspan><tspan fill="#a05c3c">"RAG systems"</tspan><tspan fill="#34322c">, </tspan><tspan fill="#a05c3c">"agentic workflows"</tspan><tspan fill="#34322c">,</tspan></text></g>
+  <g clip-path="url(#c5)"><text x="156" y="200" font-size="18"><tspan fill-opacity="0">building = [</tspan><tspan fill="#a05c3c">"financial AI tools"</tspan><tspan fill="#34322c">]</tspan></text></g>
+  <g clip-path="url(#c6)"><text x="156" y="234" font-size="18"><tspan fill="#34322c">fuel     = </tspan><tspan fill="#a05c3c">"coffee on an empty stomach, don't ask about lunch"</tspan></text></g>
+  <g clip-path="url(#c7)"><text x="156" y="268" font-size="18"><tspan fill="#34322c">status   = </tspan><tspan fill="#a05c3c">"still compiling, never crashing"</tspan></text></g>
   <g clip-path="url(#c8)"><text x="156" y="302" font-size="18"><tspan fill="#4f5d92">def </tspan><tspan fill="#96792f">__repr__</tspan><tspan fill="#34322c">(self):</tspan></text></g>
   <g clip-path="url(#c9)"><text x="200" y="336" font-size="18"><tspan fill="#4f5d92">return </tspan><tspan fill="#a05c3c">"let's build something that actually works"</tspan><tspan fill="#4a463d"> ▌<animate attributeName="fill-opacity" values="1;0" keyTimes="0;0.5" dur="1.06s" calcMode="discrete" repeatCount="indefinite"/></tspan></text></g>
 

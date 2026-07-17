@@ -1,113 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" role="img"
-     aria-label="Sidere mens eadem mutato — a constellation wired like a neural network over Kuala Lumpur, signals pulsing between stars while the loss keeps going down."
+     aria-label="still compiling — a pencil-grey constellation wired like a neural network on warm paper, crimson signals pulsing along the edges, a grey-ink plum branch full of pink blossoms in the top-left corner, amber windows glowing in the Kuala Lumpur skyline, the loss still going down."
      preserveAspectRatio="xMidYMid meet">
   <title>still compiling</title>
-  <!-- palette: night #06080f→#0e1626 · silver #9db1d3 · text #d5deee · amber #d99a2b -->
-  <!-- if lost, follow dubhe and merak. —l.y.c. -->
+  <!-- palette: paper #f3f0ea · graphite #8a8f97 · text #565b63 · crimson #9d1b1f · plum pink #e59ab0 · amber #e8b13c -->
+  <!-- the ink remembers the night sky. —l.y.c. -->
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#06080f"/>
-      <stop offset="58%" stop-color="#0a101d"/>
-      <stop offset="100%" stop-color="#0e1626"/>
-    </linearGradient>
-    <radialGradient id="cityglow" cx="14%" cy="88%" r="30%">
-      <stop offset="0%"  stop-color="#d99a2b" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="meteor" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f5f2ec"/>
+      <stop offset="100%" stop-color="#efe9e0"/>
     </linearGradient>
     <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#9db1d3" stop-opacity="0"/>
-      <stop offset="6%"   stop-color="#9db1d3" stop-opacity="0.55"/>
-      <stop offset="94%"  stop-color="#9db1d3" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#9db1d3" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#8a8f97" stop-opacity="0"/>
+      <stop offset="6%"   stop-color="#8a8f97" stop-opacity="0.5"/>
+      <stop offset="94%"  stop-color="#8a8f97" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8a8f97" stop-opacity="0"/>
     </linearGradient>
+    <!-- one petal, teardrop-shaped; five make a blossom -->
+    <path id="petal" d="M0,-1.2 C2.9,-2.2 3.8,-5.2 1.7,-7.3 C0.85,-8.2 -0.85,-8.2 -1.7,-7.3 C-3.8,-5.2 -2.9,-2.2 0,-1.2 Z"/>
+    <g id="stamens" fill="#d9a13b">
+      <circle cx="0" cy="-2.6" r="0.6"/><circle cx="2.5" cy="-0.8" r="0.6"/>
+      <circle cx="1.5" cy="2.1" r="0.6"/><circle cx="-1.5" cy="2.1" r="0.6"/>
+      <circle cx="-2.5" cy="-0.8" r="0.6"/><circle cx="0" cy="0" r="0.8" fill="#c9903a"/>
+    </g>
   </defs>
 
   <style>
     .mono  { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
     .serif { font-family: Georgia, 'Times New Roman', 'Songti SC', serif; }
 
-    /* the motto condenses out of stardust */
+    /* motto writes itself in ink: trace → seep → underline flick */
     .motto {
-      opacity: 0; letter-spacing: 3px;
-      animation: condense 2.6s cubic-bezier(.2,.6,.2,1) 1.1s forwards;
+      fill: #565b63; fill-opacity: 0;
+      stroke: #565b63; stroke-width: 0.7;
+      stroke-dasharray: 130; stroke-dashoffset: 130;
+      animation: trace 2.6s cubic-bezier(.5,.1,.4,.9) 1.1s forwards,
+                 seep 1.6s ease-in 3.1s forwards;
     }
-    @keyframes condense {
-      0%   { opacity: 0; letter-spacing: 18px; filter: blur(9px); }
-      45%  { opacity: 0.65; }
-      100% { opacity: 1; letter-spacing: 3px; filter: blur(0); }
+    @keyframes trace { to { stroke-dashoffset: 0; } }
+    @keyframes seep  { to { fill-opacity: 1; } }
+    .underline {
+      stroke-dasharray: 200; stroke-dashoffset: 200; opacity: 0.65;
+      animation: flick 0.9s cubic-bezier(.6,0,.2,1) 4.4s forwards;
     }
-    .pdot { opacity: 0; animation: converge 2.1s ease-in forwards; }
-    @keyframes converge {
-      0%   { transform: translate(var(--dx), var(--dy)); opacity: 0; }
-      22%  { opacity: 0.9; }
-      100% { transform: translate(0, 0); opacity: 0; }
+    @keyframes flick { to { stroke-dashoffset: 0; } }
+
+    /* the plum branch grows, blossoms pop, one petal keeps falling */
+    .branch {
+      stroke-dasharray: 100; stroke-dashoffset: 100;
+      animation: draw 2s cubic-bezier(.5,.1,.3,1) .4s forwards;
+    }
+    .twig1 { animation-delay: 1.4s; animation-duration: 1.2s; }
+    .twig2 { animation-delay: 1.7s; animation-duration: 1.2s; }
+    .twig3 { animation-delay: 1.2s; animation-duration: 1.2s; }
+    .bloom {
+      transform: scale(0);
+      animation: bloom .8s cubic-bezier(.3,1.5,.5,1) forwards;
+    }
+    .b1{animation-delay:2.4s} .b2{animation-delay:2.7s}
+    .b3{animation-delay:2.1s} .b4{animation-delay:1.9s}
+    .b5{animation-delay:2.3s} .b6{animation-delay:2.0s}
+    .b7{animation-delay:1.8s} .b8{animation-delay:2.9s}
+    @keyframes bloom { to { transform: scale(1); } }
+    .bud { opacity: 0; animation: pop .7s ease-out forwards; }
+    .bd1{animation-delay:2.6s} .bd2{animation-delay:2.3s}
+    .bd3{animation-delay:2.0s} .bd4{animation-delay:1.7s}
+    .petal { opacity: 0; }
+    .p1 { animation: falla 10s ease-in 5s infinite; }
+    .p2 { animation: fallb 13s ease-in 8.5s infinite; }
+    .p3 { animation: fallc 11s ease-in 12s infinite; }
+    .p4 { animation: falla 12s ease-in 15.5s infinite; }
+    @keyframes falla {
+      0%   { transform: translate(0,0) rotate(0deg); opacity: 0; }
+      4%   { opacity: 0.85; }
+      50%  { transform: translate(14px,96px) rotate(150deg); }
+      88%  { opacity: 0.85; }
+      100% { transform: translate(52px,205px) rotate(300deg); opacity: 0; }
+    }
+    @keyframes fallb {
+      0%   { transform: translate(0,0) rotate(0deg); opacity: 0; }
+      4%   { opacity: 0.8; }
+      35%  { transform: translate(-9px,72px) rotate(-120deg); }
+      70%  { transform: translate(16px,150px) rotate(-235deg); }
+      88%  { opacity: 0.8; }
+      100% { transform: translate(42px,216px) rotate(-330deg); opacity: 0; }
+    }
+    @keyframes fallc {
+      0%   { transform: translate(0,0) rotate(0deg); opacity: 0; }
+      4%   { opacity: 0.85; }
+      50%  { transform: translate(32px,88px) rotate(190deg); }
+      88%  { opacity: 0.85; }
+      100% { transform: translate(80px,184px) rotate(370deg); opacity: 0; }
     }
 
-    /* constellation draws itself */
+    /* graphite constellation draws itself */
     .net {
       stroke-dasharray: 100; stroke-dashoffset: 100;
-      animation: draw 2.8s cubic-bezier(.4,0,.2,1) .5s forwards;
+      animation: draw 2.8s cubic-bezier(.4,0,.2,1) .7s forwards;
     }
     .hint {
       stroke-dasharray: 3 5; opacity: 0;
-      animation: fadein 1.4s ease-out 3.2s forwards;
+      animation: fadein 1.4s ease-out 3.4s forwards;
     }
     @keyframes draw   { to { stroke-dashoffset: 0; } }
-    @keyframes fadein { to { opacity: 0.4; } }
+    @keyframes fadein { to { opacity: 0.45; } }
 
     .star { opacity: 0; animation: pop .7s ease-out forwards; }
-    .s1{animation-delay:.5s} .s2{animation-delay:.8s} .s3{animation-delay:1.1s}
-    .s4{animation-delay:1.4s} .s5{animation-delay:1.8s} .s6{animation-delay:2.2s}
-    .s7{animation-delay:2.6s}
+    .s1{animation-delay:.7s} .s2{animation-delay:1.0s} .s3{animation-delay:1.3s}
+    .s4{animation-delay:1.6s} .s5{animation-delay:2.0s} .s6{animation-delay:2.4s}
+    .s7{animation-delay:2.8s}
     @keyframes pop { to { opacity: 1; } }
 
-    /* amber signals travelling the graph */
+    /* crimson signals travelling the graph */
     .pulse {
       stroke-dasharray: 4 96; opacity: 0;
-      animation: signal 4.5s linear 3.6s infinite;
+      animation: signal 4.5s linear 3.8s infinite;
     }
-    .pulse.p2 { animation-delay: 5.8s; animation-duration: 6s; }
-    .pulse.home { animation-duration: 3s; animation-delay: 4.6s; }
+    .pulse.p2 { animation-delay: 6s; animation-duration: 6s; }
+    .pulse.home { animation-duration: 3s; animation-delay: 4.8s; }
     @keyframes signal {
       0%   { stroke-dashoffset: 100; opacity: 0; }
-      6%   { opacity: 0.95; }
-      94%  { opacity: 0.95; }
+      6%   { opacity: 0.9; }
+      94%  { opacity: 0.9; }
       100% { stroke-dashoffset: 0; opacity: 0; }
     }
 
-    .halo { opacity: 0; animation: breathe 4s ease-in-out 3.6s infinite; }
-    @keyframes breathe { 0%,100% { opacity: 0.14; } 50% { opacity: 0.4; } }
-    .polaris { opacity: 0; animation: pop 1s ease-out 3.4s forwards; }
-
-    .tw  { animation: twinkle 5.2s ease-in-out infinite; }
-    .tw2 { animation: twinkle 7.4s ease-in-out 2.1s infinite; }
-    @keyframes twinkle { 0%,100% { opacity: 0.3; } 50% { opacity: 0.95; } }
-
-    .shoot  { opacity: 0; animation: shoot 9s linear 4s infinite; }
-    .shoot2 { opacity: 0; animation: shoot 13s linear 9.5s infinite; }
-    @keyframes shoot {
-      0%   { transform: translate(0,0);         opacity: 0; }
-      2.5% { opacity: 1; }
-      9%   { opacity: 0.9; }
-      12%  { transform: translate(275px,132px); opacity: 0; }
-      100% { transform: translate(275px,132px); opacity: 0; }
+    /* the crimson iris — rings rotate, core breathes */
+    .iris { opacity: 0; animation: pop 1s ease-out 3.2s forwards; }
+    .ring1 {
+      transform-origin: 368px 112px;
+      animation: spin 26s linear infinite;
     }
+    .ring2 {
+      transform-origin: 368px 112px;
+      animation: spin 40s linear infinite reverse;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .core { animation: breathe 4s ease-in-out 3.6s infinite; }
+    @keyframes breathe { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
 
-    .wind { animation: drift 70s ease-in-out infinite alternate; }
-    .wind.slow { animation-duration: 95s; }
-    @keyframes drift { to { transform: translateX(46px); } }
+    /* stray hair-strokes drifting on the paper */
+    .strand { animation: drift 70s ease-in-out infinite alternate; }
+    .strand.slow { animation-duration: 95s; }
+    @keyframes drift { to { transform: translateX(38px); } }
 
     .horizon {
       stroke-dasharray: 864; stroke-dashoffset: 864;
       animation: draw 2.2s cubic-bezier(.5,0,.15,1) .4s forwards;
     }
 
-    .city { opacity: 0; animation: cityrise 1.6s ease-out 1s forwards; }
+    /* kuala lumpur, in grey ink */
+    .city { opacity: 0; animation: cityrise 1.6s ease-out 1.2s forwards; }
     @keyframes cityrise { to { opacity: 1; } }
     .win { opacity: 0; animation: winon .4s ease-out forwards; }
     .w1{animation-delay:2.2s} .w2{animation-delay:2.9s} .w3{animation-delay:3.5s} .w4{animation-delay:4.2s}
@@ -115,8 +158,8 @@
     .late { animation: latenight 6s steps(1) 5s infinite; }
     @keyframes latenight { 0%,88% { opacity: 0.85; } 89%,94% { opacity: 0.15; } 95%,100% { opacity: 0.85; } }
 
-    .cat { opacity: 0; animation: catrise 1.4s ease-out 1.6s forwards; }
-    @keyframes catrise { to { opacity: 1; } }
+    .cat { opacity: 0; animation: fadein2 1.4s ease-out 1.8s forwards; }
+    @keyframes fadein2 { to { opacity: 1; } }
     .tail {
       transform-origin: 306px 289px;
       animation: sway 5s ease-in-out 3s infinite alternate;
@@ -132,106 +175,118 @@
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; }
-      .net, .horizon { stroke-dashoffset: 0; }
-      .star, .polaris, .city, .cat { opacity: 1; }
-      .motto { opacity: 1; filter: none; }
-      .motto.cn { opacity: 0.85; }
-      .hint { opacity: 0.4; }
-      .halo { opacity: 0.22; }
-      .tw, .tw2 { opacity: 0.6; }
+      .net, .horizon, .branch { stroke-dashoffset: 0; }
+      .motto { fill-opacity: 1; stroke-dashoffset: 0; }
+      .underline { stroke-dashoffset: 0; }
+      .bloom { transform: scale(1); }
+      .bud { opacity: 1; }
+      .petal { opacity: 0 !important; }
+      .star, .iris, .cat, .city { opacity: 1; }
       .win { opacity: 0.85; }
-      .pdot, .pulse, .shoot, .shoot2, .t2, .t3, .t4 { opacity: 0 !important; }
+      .hint { opacity: 0.45; }
+      .core { opacity: 0.85; }
+      .pulse, .t2, .t3, .t4 { opacity: 0 !important; }
       .tick:not(.t2):not(.t3):not(.t4) { opacity: 1; }
     }
   </style>
 
-  <!-- night -->
-  <rect width="1000" height="340" rx="6" fill="url(#sky)"/>
-  <rect width="1000" height="340" rx="6" fill="url(#cityglow)"/>
+  <!-- paper -->
+  <rect width="1000" height="340" rx="6" fill="url(#paper)"/>
 
-  <!-- airglow -->
-  <g stroke="#cfdaea" stroke-linecap="round" fill="none">
-    <path class="wind"      d="M80 210 q150 -12 300 -4" stroke-width="2.2" opacity="0.07"/>
-    <path class="wind slow" d="M420 262 q120 -10 235 -3" stroke-width="1.8" opacity="0.05"/>
+  <!-- paper grain -->
+  <g fill="#8a8f97">
+    <circle cx="248" cy="96"  r="1.1" opacity="0.18"/>
+    <circle cx="702" cy="70"  r="1.0" opacity="0.15"/>
+    <circle cx="864" cy="58"  r="0.9" opacity="0.14"/>
+    <circle cx="60"  cy="86"  r="1.0" opacity="0.16"/>
+    <circle cx="512" cy="132" r="1.0" opacity="0.15"/>
+    <circle cx="150" cy="180" r="0.9" opacity="0.13"/>
+    <circle cx="930" cy="200" r="1.0" opacity="0.15"/>
   </g>
 
-  <!-- background stars -->
-  <g fill="#f4f8fd">
-    <circle class="tw"  cx="132" cy="150" r="1.6"/>
-    <circle cx="248" cy="96"  r="1.3" opacity="0.55"/>
-    <circle class="tw2" cx="415" cy="188" r="1.5"/>
-    <circle cx="702" cy="70"  r="1.2" opacity="0.5"/>
-    <circle class="tw"  cx="936" cy="196" r="1.4"/>
-    <circle cx="864" cy="58"  r="1.1" opacity="0.45"/>
-    <circle class="tw2" cx="60"  cy="86"  r="1.3"/>
-    <circle class="tw"  cx="230" cy="216" r="1.5"/>
-    <circle cx="318" cy="150" r="1.2" opacity="0.55"/>
-    <circle class="tw2" cx="512" cy="132" r="1.3"/>
+  <!-- stray strands of hair, drifting -->
+  <g stroke="#9aa0a8" stroke-linecap="round" fill="none">
+    <path class="strand"      d="M560 40 q210 60 330 190" stroke-width="1.1" opacity="0.22"/>
+    <path class="strand slow" d="M640 26 q180 80 270 220" stroke-width="0.8" opacity="0.16"/>
+    <path class="strand slow" d="M90 150 q160 -30 300 -10" stroke-width="0.9" opacity="0.14"/>
   </g>
 
-  <!-- meteors -->
-  <g class="shoot">
-    <line x1="52" y1="98" x2="150" y2="145" stroke="url(#meteor)" stroke-width="2.6" stroke-linecap="round"/>
-    <circle cx="150" cy="145" r="2.4" fill="#ffffff" opacity="0.95"/>
+  <!-- a plum branch in grey ink, blossoming pink from the corner -->
+  <g stroke="#4d5158" fill="none" stroke-linecap="round">
+    <path class="branch" pathLength="100"
+          d="M-8,24 C48,32 98,44 146,80 C168,98 184,120 196,144"
+          stroke-width="3"/>
+    <path class="branch twig1" pathLength="100"
+          d="M94,42 C118,34 142,29 168,32" stroke-width="1.8"/>
+    <path class="branch twig2" pathLength="100"
+          d="M138,72 C150,62 164,55 182,53" stroke-width="1.6"/>
+    <path class="branch twig3" pathLength="100"
+          d="M48,28 C58,18 74,10 96,9" stroke-width="1.5"/>
   </g>
-  <g class="shoot2">
-    <line x1="270" y1="86" x2="342" y2="120" stroke="url(#meteor)" stroke-width="1.8" stroke-linecap="round"/>
-    <circle cx="342" cy="120" r="1.7" fill="#ffffff" opacity="0.9"/>
+  <!-- pink blossoms: five teardrop petals, golden stamens -->
+  <g transform="translate(168,30) rotate(10)"><g class="bloom b1" fill="#e59ab0">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(184,55) rotate(-15) scale(0.9)"><g class="bloom b2" fill="#d87f9c">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(146,81) rotate(30) scale(0.95)"><g class="bloom b3" fill="#e59ab0">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(104,45) scale(0.75)"><g class="bloom b4" fill="#eaa9bc">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(128,64) rotate(45) scale(0.7)"><g class="bloom b5" fill="#d87f9c">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(92,10) rotate(-20) scale(0.85)"><g class="bloom b6" fill="#e59ab0">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(66,17) rotate(15) scale(0.6)"><g class="bloom b7" fill="#eaa9bc">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <g transform="translate(202,132) rotate(-30) scale(0.8)"><g class="bloom b8" fill="#d87f9c">
+    <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+    <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+    <use href="#stamens"/>
+  </g></g>
+  <!-- buds, not yet compiled -->
+  <g fill="#c2597a">
+    <circle class="bud bd1" cx="196" cy="146" r="2.6"/>
+    <circle class="bud bd2" cx="160" cy="57"  r="2.2"/>
+    <circle class="bud bd3" cx="104" cy="13"  r="2.0"/>
+    <circle class="bud bd4" cx="36"  cy="26"  r="2.0"/>
+  </g>
+  <!-- petals, always falling -->
+  <g transform="translate(170,38)">
+    <ellipse class="petal p1" rx="3.2" ry="2.1" fill="#e08aa4"/>
+  </g>
+  <g transform="translate(93,14)">
+    <ellipse class="petal p2" rx="2.8" ry="1.9" fill="#eaa9bc"/>
+  </g>
+  <g transform="translate(185,58)">
+    <ellipse class="petal p3" rx="3.0" ry="2.0" fill="#d87f9c"/>
+  </g>
+  <g transform="translate(147,84)">
+    <ellipse class="petal p4" rx="2.6" ry="1.8" fill="#e59ab0"/>
   </g>
 
-  <!-- the big dipper, wired like a graph -->
-  <path class="net" pathLength="100"
-        d="M912,110 L852,116 L788,140 L722,170 L626,180 L664,238 L748,238 L722,170"
-        fill="none" stroke="#9db1d3" stroke-width="1.2" stroke-opacity="0.6" stroke-linejoin="round"/>
-
-  <!-- signals -->
-  <path class="pulse" pathLength="100"
-        d="M912,110 L852,116 L788,140 L722,170 L626,180 L664,238 L748,238 L722,170"
-        fill="none" stroke="#d99a2b" stroke-width="2.4" stroke-linecap="round"/>
-  <path class="pulse p2" pathLength="100"
-        d="M722,170 L748,238 L664,238 L626,180 L722,170 L788,140 L852,116 L912,110"
-        fill="none" stroke="#d99a2b" stroke-width="2.4" stroke-linecap="round"/>
-
-  <!-- pointer stars aim home -->
-  <path class="hint" d="M626,180 Q516,140 380,114" stroke="#9db1d3" stroke-width="1.1" fill="none"/>
-  <path class="pulse home" pathLength="100" d="M664,238 L626,180 Q516,140 380,114"
-        fill="none" stroke="#d99a2b" stroke-width="2.2" stroke-linecap="round"/>
-
-  <!-- seven stars -->
-  <g fill="#fdfefe">
-    <circle class="star s1" cx="912" cy="110" r="2.6"/>
-    <circle class="star s2" cx="852" cy="116" r="2.4"/>
-    <circle class="star s3" cx="788" cy="140" r="2.5"/>
-    <circle class="star s4" cx="722" cy="170" r="2.7"/>
-    <circle class="star s5" cx="626" cy="180" r="2.9"/>
-    <circle class="star s6" cx="664" cy="238" r="2.6"/>
-    <circle class="star s7" cx="748" cy="238" r="2.5"/>
-  </g>
-
-  <!-- polaris: the only warm star in this sky -->
-  <circle class="halo"    cx="368" cy="112" r="11" fill="#d99a2b"/>
-  <circle class="polaris" cx="368" cy="112" r="3.4" fill="#e8b04a"/>
-
-  <!-- the motto, condensing out of stardust -->
-  <g fill="#d5deee">
-    <circle class="pdot" style="--dx:-72px; --dy:26px;  animation-delay:.5s"  cx="428" cy="48" r="1.6"/>
-    <circle class="pdot" style="--dx:54px;  --dy:-30px; animation-delay:.7s"  cx="466" cy="56" r="1.3"/>
-    <circle class="pdot" style="--dx:-38px; --dy:-42px; animation-delay:.6s"  cx="502" cy="50" r="1.8"/>
-    <circle class="pdot" style="--dx:80px;  --dy:18px;  animation-delay:.9s"  cx="536" cy="57" r="1.4"/>
-    <circle class="pdot" style="--dx:-90px; --dy:-14px; animation-delay:.8s"  cx="574" cy="49" r="1.5"/>
-    <circle class="pdot" style="--dx:44px;  --dy:38px;  animation-delay:1.1s" cx="448" cy="53" r="1.2" fill="#d99a2b"/>
-    <circle class="pdot" style="--dx:-58px; --dy:34px;  animation-delay:1.2s" cx="610" cy="55" r="1.4"/>
-    <circle class="pdot" style="--dx:66px;  --dy:-26px; animation-delay:1.3s" cx="390" cy="52" r="1.3"/>
-    <circle class="pdot" style="--dx:-24px; --dy:52px;  animation-delay:1.5s" cx="558" cy="70" r="1.3"/>
-    <circle class="pdot" style="--dx:36px;  --dy:-48px; animation-delay:1.6s" cx="482" cy="68" r="1.5" fill="#d99a2b"/>
-    <circle class="pdot" style="--dx:-64px; --dy:-20px; animation-delay:1.7s" cx="524" cy="46" r="1.2"/>
-    <circle class="pdot" style="--dx:70px;  --dy:30px;  animation-delay:1.8s" cx="444" cy="64" r="1.4"/>
-  </g>
-  <text class="serif motto" x="500" y="66" text-anchor="middle" font-size="19"
-        font-style="italic" fill="#d5deee">Sidere mens eadem mutato</text>
-
-  <!-- kuala lumpur, mostly asleep -->
-  <g class="city" fill="#26345a" stroke="#26345a">
+  <!-- kuala lumpur, redrawn in grey ink over the red -->
+  <g class="city" fill="#5c6169" stroke="#5c6169">
     <rect x="84"  y="284" width="14" height="8" stroke="none"/>
     <rect x="100" y="280" width="10" height="12" stroke="none"/>
     <polygon points="116,292 116,264 118,264 118,256 120,256 122,256 122,264 124,264 124,292" stroke="none"/>
@@ -245,16 +300,64 @@
     <line x1="172" y1="254" x2="172" y2="245" stroke-width="1.1"/>
     <rect x="182" y="286" width="16" height="6" stroke="none"/>
   </g>
-  <!-- whoever is still awake -->
-  <g fill="#d99a2b">
+  <!-- whoever is still awake — windows glowing amber -->
+  <g fill="#e8b13c">
     <rect class="win w1 late" x="119" y="268" width="2" height="2.6"/>
     <rect class="win w2" x="137" y="276" width="2" height="2.6"/>
     <rect class="win w3" x="104" y="283" width="2" height="2.4"/>
     <rect class="win w4" x="150" y="285" width="2" height="2.4"/>
   </g>
 
-  <!-- a cat, supervising the training run -->
-  <g class="cat" fill="#26345a" stroke="#48598b" stroke-width="0.8">
+  <!-- the big dipper, wired like a graph — graphite now -->
+  <path class="net" pathLength="100"
+        d="M912,110 L852,116 L788,140 L722,170 L626,180 L664,238 L748,238 L722,170"
+        fill="none" stroke="#8a8f97" stroke-width="1.2" stroke-opacity="0.75" stroke-linejoin="round"/>
+
+  <!-- crimson signals -->
+  <path class="pulse" pathLength="100"
+        d="M912,110 L852,116 L788,140 L722,170 L626,180 L664,238 L748,238 L722,170"
+        fill="none" stroke="#9d1b1f" stroke-width="2.4" stroke-linecap="round"/>
+  <path class="pulse p2" pathLength="100"
+        d="M722,170 L748,238 L664,238 L626,180 L722,170 L788,140 L852,116 L912,110"
+        fill="none" stroke="#9d1b1f" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- pointer stars aim at the iris -->
+  <path class="hint" d="M626,180 Q516,140 392,116" stroke="#8a8f97" stroke-width="1.1" fill="none"/>
+  <path class="pulse home" pathLength="100" d="M664,238 L626,180 Q516,140 392,116"
+        fill="none" stroke="#9d1b1f" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- seven stars, graphite nodes -->
+  <g fill="#565b63">
+    <circle class="star s1" cx="912" cy="110" r="2.6"/>
+    <circle class="star s2" cx="852" cy="116" r="2.4"/>
+    <circle class="star s3" cx="788" cy="140" r="2.5"/>
+    <circle class="star s4" cx="722" cy="170" r="2.7"/>
+    <circle class="star s5" cx="626" cy="180" r="2.9"/>
+    <circle class="star s6" cx="664" cy="238" r="2.6"/>
+    <circle class="star s7" cx="748" cy="238" r="2.5"/>
+  </g>
+
+  <!-- the crimson iris: the only thing looking back -->
+  <g class="iris">
+    <g class="ring1" stroke="#9d1b1f" fill="none">
+      <circle cx="368" cy="112" r="16" stroke-width="1.1" stroke-dasharray="7 5" opacity="0.7"/>
+      <line x1="368" y1="93"  x2="368" y2="98"  stroke-width="1.2" opacity="0.7"/>
+      <line x1="368" y1="126" x2="368" y2="131" stroke-width="1.2" opacity="0.7"/>
+    </g>
+    <g class="ring2" stroke="#9d1b1f" fill="none">
+      <circle cx="368" cy="112" r="9.5" stroke-width="1" stroke-dasharray="3 4" opacity="0.8"/>
+    </g>
+    <circle class="core" cx="368" cy="112" r="3.4" fill="#9d1b1f"/>
+  </g>
+
+  <!-- the motto, writing itself in ink -->
+  <text class="serif motto" x="500" y="66" text-anchor="middle" font-size="19"
+        font-style="italic" letter-spacing="3" paint-order="stroke">still compiling</text>
+  <path class="underline" pathLength="200" d="M420,78 L580,78"
+        fill="none" stroke="#9d1b1f" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!-- a cat in grey ink, supervising the training run -->
+  <g class="cat" fill="#565b63" stroke="#3f434a" stroke-width="0.8">
     <path class="tail" d="M306,290 C296,288 291,281 295,274 C297,271 301,271 302,274 C299,277 301,283 308,285 Z"/>
     <path d="M304,292 C303,281 307,272 314,268 L316,265 L322,265 L324,268 C328,273 329,282 329,292 Z"/>
     <circle cx="319" cy="260" r="5.8"/>
@@ -266,12 +369,11 @@
   <line class="horizon" x1="68" y1="292" x2="932" y2="292" stroke="url(#hairline)" stroke-width="1.3"/>
 
   <!-- words, barely -->
-
-  <g class="mono" font-size="13" fill="#6c81a6">
+  <g class="mono" font-size="13" fill="#7c828b">
     <text class="tick"    x="906" y="318" text-anchor="end">epoch 7749 · loss 0.3172 ↓</text>
     <text class="tick t2" x="906" y="318" text-anchor="end">epoch 7750 · loss 0.1284 ↓</text>
     <text class="tick t3" x="906" y="318" text-anchor="end">epoch 7751 · loss 0.0647 ↓</text>
     <text class="tick t4" x="906" y="318" text-anchor="end">epoch 7752 · loss 0.0316 ↓</text>
   </g>
-  <text class="mono" x="932" y="318" text-anchor="end" font-size="13" fill="#d99a2b"><tspan class="cursor">▌</tspan></text>
+  <text class="mono" x="932" y="318" text-anchor="end" font-size="13" fill="#9d1b1f"><tspan class="cursor">▌</tspan></text>
 </svg>
